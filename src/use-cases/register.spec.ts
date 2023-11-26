@@ -45,12 +45,12 @@ describe('Register Use Case', () => {
       password: '123456',
     })
 
-    await expect(async () => {
-      await sut.execute({
+    await expect(() =>
+      sut.execute({
         name: 'John Doe',
         email: 'johndoe@example.com',
         password: '123456',
-      })
-    }).rejects.toBeInstanceOf(UserAlreadyExistsError)
+      }),
+    ).rejects.toBeInstanceOf(UserAlreadyExistsError)
   })
 })

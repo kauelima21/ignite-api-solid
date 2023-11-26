@@ -23,10 +23,10 @@ model CheckIn {
   created_at   DateTime  @default(now())
   validated_at DateTime?
 
-  user   User   @relation(fields: [userId], references: [id])
-  gym    Gym    @relation(fields: [gym_id], references: [id])
-  gym_id String
-  userId String
+  user    User   @relation(fields: [user_id], references: [id])
+  gym     Gym    @relation(fields: [gym_id], references: [id])
+  gym_id  String
+  user_id String
 
   @@map("check_ins")
 }
