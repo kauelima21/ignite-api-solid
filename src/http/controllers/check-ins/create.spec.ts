@@ -28,8 +28,8 @@ describe('Create Check-in (e2e)', () => {
       .post(`/gyms/${gym.id}/check-ins`)
       .set('Authorization', `Bearer ${token}`)
       .send({
-        latitude: 1,
-        longitude: 1,
+        latitude: -27.2092052,
+        longitude: -27.2092052,
       })
 
     expect(response.statusCode).toEqual(201)
